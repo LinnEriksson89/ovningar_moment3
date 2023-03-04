@@ -1,7 +1,7 @@
 <?php
     class Vehicle {
         //Properties
-        private $brand;
+        protected $brand;
         private $model;
         private $year;
         private $speed = 0;
@@ -31,7 +31,7 @@
         }
 
         function stop() : int{
-            $this->speed = 0;
+            $this->speed = $this->speed+10;
             return $this->speed;
 
         }
