@@ -11,6 +11,8 @@ include_once("includes/header.php");
                         
                         echo "<p>" . $car1->getVehicle() ."</p>";
                         echo "<p>" . $car2->getVehicle() ."</p>";
+                        $car1->setYear(1999);
+                        echo "<p>" . $car1->getVehicle() ."</p>";
                     ?>
                 </section>
                 <section>
