@@ -39,11 +39,18 @@ h4 {
 
 header a {
     text-decoration: none;
+    color: #fff;
 }
 
 /*Storlek i paragrafer*/
 p, ul {
     font-size: 1.6em;
+}
+
+header, footer {
+    background-color: #800;
+    color: #fff;
+    padding: 2%;
 }
 
 /*Icke-mobil-lägen*/
