@@ -11,7 +11,6 @@
             $this->brand = $brand;
             $this->model = $model;
             $this->year = $year;
-            $this->speed = $speed;
         }
 
         //Funktion för att hämta fordon
