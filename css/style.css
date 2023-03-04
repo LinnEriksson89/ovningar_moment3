@@ -1,0 +1,83 @@
+/* DT093G - Webbutveckling II
+ * Moment 3
+ * Linn Erikson, VT23
+ */
+ 
+@import url("normalize.css");
+
+/*Allmänna "inställningar" som border-box etc.*/
+html {
+    /*62.5% av 16px => 10px*/
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+/*Mobile-first design*/
+
+/*Döljer skiplink på mobil*/
+.skiplink {
+    display: none;
+}
+
+/*Rubriker och deras storlekar och färger*/
+h1 {
+    font-size: 3.2em;
+}
+
+h2 {
+    font-size: 2.4em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+header a {
+    text-decoration: none;
+}
+
+/*Storlek i paragrafer*/
+p, ul {
+    font-size: 1.6em;
+}
+
+/*Icke-mobil-lägen*/
+@media only screen and (min-width: 750px){
+
+    /*Nu finns det en skiplink*/
+    .skiplink {
+        display: inline;
+        height: 1px;
+        width: 1px;
+        margin: -1px;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    .skiplink:focus {
+        width: auto;    
+        height: auto;
+        background-color: #000;
+        color: #fff;
+        font-size: 1.6em;
+        text-align: center;
+        padding: 2%;
+        border-radius: 10px;
+        border: 1px solid #fff;
+        margin: 10px 0 0 10px;
+        z-index: 99;
+
+    }
+
+    /*Kortare paragrafer så dom är läsbara.*/
+    p {
+        width: 70%
+    }
+
+    /*Förutom i footer där det är snyggare med centrerat*/
+    footer p {
+        width: 100%;
+    }
+}
