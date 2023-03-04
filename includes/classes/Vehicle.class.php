@@ -44,5 +44,18 @@
             }
             return false;
         }
+
+        //Getters
+        function getBrand() : string {
+            return $this->brand;
+        }
+
+        function getModel() : string {
+            return $this->model;
+        }
+        
+        function getYear() : int {
+            return $this->year;
+        }
     }
 ?>
