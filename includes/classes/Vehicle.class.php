@@ -37,8 +37,8 @@
         }
 
         function setYear(int $year) : bool {
-            //Kontrollerar att det finns ett årtal
-            if($year !== 0){
+            //Kontrollerar att det finns ett årtal som är nyare än ett av alternativen för "första riktiga bilen" från wikipedia
+            if($year !== 0 && $year > 1873){
                 $this->year = $year;
                 return true;
             }
