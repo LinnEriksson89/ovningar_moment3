@@ -15,7 +15,7 @@
 
         //Funktion för att hämta fordon
         function getVehicle() : string {
-            return "Tillverkare: " . $this->brand . ", modell: " . $this->model . ", årsmodel: " . $this->year . ".";
+            return "Tillverkare: $this->brand, modell: $this->model, årsmodel: $this->year.";
         }
 
         //Hastighetsfunktioner
