@@ -4,18 +4,39 @@
         private $brand;
         private $model;
         private $year;
+        private $speed = 0;
 
         //Konstruktor
         function __construct(string $brand, string $model, int $year) {
             $this->brand = $brand;
             $this->model = $model;
             $this->year = $year;
+            $this->speed = $speed;
         }
 
         //Funktion för att hämta fordon
         function getVehicle() : string {
             return "Tillverkare: " . $this->brand . ", modell: " . $this->model . ", årsmodel: " . $this->year . ".";
         }
+
+        //Hastighetsfunktioner
+        function accelerate() : int {
+            $this->speed = $this->speed+10;
+            return $this->speed;
+
+        }
+
+        function decelerate() : int {
+            $this->speed = $this->speed-10;
+            return $this->speed;
+        }
+
+        function stop() : int{
+            $this->speed = 0;
+            return $this->speed;
+
+        }
+
 
         //Setters
         function setBrand(string $brand) : bool {
@@ -45,6 +66,11 @@
             return false;
         }
 
+        function setSpeed(int $speed) : bool {
+            $this->speed = $speed;
+            return true;
+        }
+
         //Getters
         function getBrand() : string {
             return $this->brand;
@@ -56,6 +82,10 @@
         
         function getYear() : int {
             return $this->year;
+        }
+
+        function getSpeed() : int {
+            return $this->speed;
         }
     }
 ?>

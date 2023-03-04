@@ -20,7 +20,27 @@ include_once("includes/header.php");
                         echo "<p>" . $car1->getVehicle() ."</p>";
                         echo "<h4>Testar get-metoderna på bil 2</h4>";
                         echo "<p>Bil två har modell: " . $car2->getModel() . " och är från " . $car2->getYear() . ". Märket är " . $car2->getBrand() . " </p>";
-                        
+
+                        echo "<h4>Gentlemen start your engines:</h4>";
+                        $car1->accelerate();
+                        echo "<p>Den första bilen kör i " . $car1->getSpeed() . " km/h.</p>";
+                        $car1->accelerate();
+                        echo "<p>Nu kör den i " . $car1->getSpeed() . " km/h.</p>";
+                        $car1->accelerate();
+                        $car1->accelerate();
+                        $car1->setSpeed(37);
+                        echo "<p>Nu har vi manuellt satt hastigheten till: " . $car1->getSpeed() . " km/h.</p>";
+                        $car1->accelerate();
+                        $car1->accelerate();
+                        echo "<p>Nu kör den i " . $car1->getSpeed() . " km/h.</p>";
+                        $car1->decelerate();
+                        echo "<p>Nu kör den i " . $car1->getSpeed() . " km/h.</p>";
+                        $car1->decelerate();
+                        echo "<p>Nu kör den i " . $car1->getSpeed() . " km/h.</p>";
+                        $car1->stop(); 
+                        echo "<p>Nu kör den i " . $car1->getSpeed() . " km/h.</p>";
+
+
                     ?>
                 </section>
                 <section>
